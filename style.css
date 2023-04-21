@@ -27,7 +27,7 @@ body {
   
   h1.active {
     color: azure;
-    font-family: 'UniqueRegular';
+    font-family: 'UniqueRegular', Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-style: normal;
     background-color: #0b0b0b;
@@ -59,7 +59,11 @@ body {
     font-size: 2em;
     border-radius: 50%;
   }
+  #leaf-icon.active {
+     color: green;
+  }
   
+
   .switch {
     align-self: flex-start;
     border: solid 0.2em transparent;
@@ -89,6 +93,7 @@ body {
     border: solid 0.2em #0b0b0b;
     outline: double 5px;
     border-radius: 0.3em;
+    background-color: rgba(0, 0, 0, 0.1);
   }
   #label-user-input {
     grid-column: 2/3;
@@ -97,6 +102,7 @@ body {
     font-weight: bold;
     font-size: 1.4em;
     border: solid 0.1em;
+    border-radius: 0.2em;
   }
   #user-input {
     grid-row: 1;
@@ -117,6 +123,7 @@ body {
     font-weight: bold;
     font-size: 1.3em;
     border: solid 0.1em;
+    border-radius: 0.2em;
   }
   #size-input {
     grid-row: 2;
@@ -125,9 +132,10 @@ body {
     border-bottom: solid 0.15em #191919;
     box-shadow: 0.3em 0.2em 0.5em lightgrey;
     width: 5em;
-    height: 1.5em;
+    height: auto;
     border-radius: 0.2em;
     text-align: center;
+    place-items: center;
     accent-color: #0b0b0b;
   }
   
@@ -148,25 +156,25 @@ body {
     height: 2.5em;
     border-radius: 0.3em;
     margin: 0.2em auto;
-    font-family: monospace;
+    font-family: Monospace, Arial, Helvetica, sans-serif;
     font-size: 1em;
     font-weight: bold;
-    background-color: transparent;
-    box-shadow: 0.2em 0.2em  lightgrey;
-    border: solid 0.1em;
+    background-color: inherit;
+    box-shadow: 0.2em 0.2em lightgrey;
+    
   }
   
   #sub-btn:hover {
-    border-bottom: solid 0.2em;
-    border-right: solid 0.2em;
+   box-shadow: 0.1em 0.1em #999;
+   background-color: white;
   }
   
   #link-container {
     position: absolute;
     display: none;
     border: solid 0.2em;
+    border-radius: 0.2em;
     left: 3em;
-
   }
 
 
@@ -178,30 +186,34 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 1em;
-    background-color: goldenrod;
-    width: 7rem;
-    height: 7rem;
+    background-color: transparent;
+    width: 6.7rem;
+    height: 6.7rem;
     text-align: center;
     padding: 0.2em;
     border: double 0.5em;
     border-radius: 0.2em;
   }
-  
-  #target-link:hover {
-    text-decoration: solid 0.1em underline;
-
-  }
 
   #img {
     width: 100%;
     height: auto;
-  
   }
 
   #link-text {
     margin: auto;
-    background-color: lightgrey;
-    padding: 0.1em;
+    padding: 0.3em 0.1em;
     text-align: center;
-    font-size: 1em;
+    font-size: 0.8em;
+    color: black;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 0.1em solid;
+    border-top: none;
+    font-weight: bold;
+  }
+
+  #link-container:hover {
+    text-decoration: underline;
+    background-color: rgba(133, 219, 107, 0.703);
   }
